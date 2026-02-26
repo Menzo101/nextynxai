@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const subsidiaries = [
   {
-    title: "NextLynx Software",
+    title: "NextLynx.AI Software",
     description:
       "We build enterprise-grade, high-performance digital products. From SaaS platforms to complex systems—our AI-first approach means faster delivery and smarter solutions.",
     link: "/software",
@@ -24,7 +24,7 @@ const subsidiaries = [
     ),
   },
   {
-    title: "NextLynx Marketing",
+    title: "NextLynx.AI Marketing",
     description:
       "Data-first digital marketing. We harness AI to analyze markets, optimize campaigns, and maximize ROI for software companies and beyond.",
     link: "/marketing",

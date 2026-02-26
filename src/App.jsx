@@ -11,6 +11,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import AboutUs from "./pages/AboutUs";
 import SoftwarePage from "./pages/SoftwarePage";
 import Error from "./pages/Error";
+import NextLynxAiBlogPage from "./pages/NextLynxAiBlogPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/contact" element={<ContactUsPage />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/software" element={<SoftwarePage />} />
+            <Route path="/blog" element={<NextLynxAiBlogPage />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

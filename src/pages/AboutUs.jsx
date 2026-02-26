@@ -6,7 +6,7 @@ const values = [
   {
     title: "Software Development",
     description:
-      "NextLynx Software builds enterprise-grade digital products—from SaaS platforms to complex systems—for businesses ready to scale.",
+      "NextLynx.AI Software builds enterprise-grade digital products—from SaaS platforms to complex systems—for businesses ready to scale.",
     icon: (
       <svg
         className="w-5 h-5 text-secondary"
@@ -26,7 +26,7 @@ const values = [
   {
     title: "Digital Marketing",
     description:
-      "NextLynx Marketing helps brands grow through strategic paid media, SEO, content, and full-funnel campaign execution.",
+      "NextLynx.AI Marketing helps brands grow through strategic paid media, SEO, content, and full-funnel campaign execution.",
     icon: (
       <svg
         className="w-5 h-5 text-secondary"
@@ -70,21 +70,21 @@ const milestones = [
     year: "2025",
     title: "Foundation",
     description:
-      "NextLynx was founded with a  goal: build great software for businesses that need to scale. We started as a small dev team taking on client projects.",
-    tag: "NextLynx Software",
+      "NextLynx.AI was founded with a  goal: build great software for businesses that need to scale. We started as a small dev team taking on client projects.",
+    tag: "NextLynx.AI Software",
   },
   {
     year: "2026",
     title: "The Expansion",
     description:
-      "We launched NextLynx Marketing to help our clients not just build products, but grow them. Tobidevs Academy followed to train developers in-house.",
-    tag: "NextLynx Marketing",
+      "We launched NextLynx.AI Marketing to help our clients not just build products, but grow them. Tobidevs Academy followed to train developers in-house.",
+    tag: "NextLynx.AI Marketing",
   },
   {
     year: "2026",
     title: "The Ecosystem",
     description:
-      "With the launch of our Talent Network, the full NextLynx ecosystem came together—four subsidiaries working as one to deliver end-to-end value.",
+      "With the launch of our Talent Network, the full NextLynx.AI ecosystem came together—four subsidiaries working as one to deliver end-to-end value.",
     tag: "Talent Network",
   },
 ];
@@ -135,7 +135,7 @@ const AboutUs = () => {
           </h1>
 
           <p className="max-w-2xl mx-auto text-white/70 text-sm sm:text-base leading-relaxed mb-10">
-            NextLynx is a software development company with four specialized
+            NextLynx.AI is a software development company with four specialized
             subsidiaries. We build software, run marketing campaigns, train
             developers, and connect businesses with top talent—all under one
             roof.
@@ -204,7 +204,7 @@ const AboutUs = () => {
             </h2>
             <p className="text-white/60 text-sm sm:text-base max-w-xl leading-relaxed">
               From a small development team to a full ecosystem of four
-              subsidiaries. Here&rsquo;s how NextLynx grew into what it is
+              subsidiaries. Here&rsquo;s how NextLynx.AI grew into what it is
               today.
             </p>
           </div>

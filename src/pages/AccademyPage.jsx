@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import frontendImage from "../assets/frontend_text_2.jpg";
+import backendImage from "../assets/backend_text_2.jpg";
+import codingWithAiImage from "../assets/2106.i201.007.F.m004.c9.call center technical support isometric.jpg";
 
 const courses = [
   {
-    title: "AI-Powered Product Development",
+    title: "Coding with AI",
     description:
       "Build smarter products faster. Learn to integrate AI tools, APIs, and automation into your development workflow for 10x productivity.",
-    price: "$400",
+    image: codingWithAiImage,
     icon: (
       <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -13,24 +16,24 @@ const courses = [
     ),
   },
   {
-    title: "Modern Fullstack Systems",
+    title: "Backend Development",
     description:
-      "Build production-grade fullstack applications. Modern frameworks, scalable backends, real-time systems, and cloud deployment.",
-    price: "$300",
+      "Master server-side programming, databases, APIs, and cloud infrastructure. Build scalable backends that power modern applications.",
+    image: backendImage,
     icon: (
       <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
       </svg>
     ),
   },
   {
-    title: "Web3 & Smart Contracts",
+    title: "Frontend Development",
     description:
-      "Blockchain development from first principles. Smart contracts, DeFi protocols, and decentralized application architecture.",
-    price: "$400",
+      "Build beautiful, responsive user interfaces with modern frameworks. Master React, CSS, component architecture, and interactive web experiences.",
+    image: frontendImage,
     icon: (
       <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
       </svg>
     ),
   },
@@ -162,11 +165,19 @@ const AccademyPage = () => {
                 key={course.title}
                 className="bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-secondary/50 transition-colors group"
               >
-                {/* Course Image Placeholder */}
+                {/* Course Image */}
                 <div className="h-44 bg-gradient-to-br from-secondary/20 to-primary relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent"></div>
+                  {course.image ? (
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-full object-contain bg-white"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent"></div>
+                  )}
                   <div className="absolute bottom-4 left-4">
-                    <div className="w-8 h-8 bg-secondary/30 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-secondary/30 rounded-lg flex items-center justify-center backdrop-blur-sm">
                       {course.icon}
                     </div>
                   </div>
@@ -179,9 +190,12 @@ const AccademyPage = () => {
                   <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">
                     {course.description}
                   </p>
-                  <span className="text-secondary font-bold text-xl">
-                    {course.price}
-                  </span>
+                  <Link
+                    to="/contact"
+                    className="inline-block bg-secondary hover:bg-secondary/90 text-white text-sm font-medium px-5 py-2 rounded-lg transition-colors"
+                  >
+                    Reach Out
+                  </Link>
                 </div>
               </div>
             ))}

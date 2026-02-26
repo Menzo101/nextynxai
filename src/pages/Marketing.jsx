@@ -87,7 +87,7 @@ const Marketing = () => {
             <div>
               <div className="inline-block mb-6">
                 <span className="text-secondary text-xs font-medium tracking-wider uppercase border border-secondary/40 rounded-full px-4 py-1.5">
-                  NextLynx.Ai Marketing
+                  NextLynx.AI Marketing
                 </span>
               </div>
 
@@ -100,7 +100,7 @@ const Marketing = () => {
               </h1>
 
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
-                NextLynx.Ai Marketing is the growth arm of the NextLynx.Ai
+                NextLynx.AI Marketing is the growth arm of the NextLynx.AI
                 ecosystem. We help businesses scale through strategic digital
                 marketing—from paid media and SEO to content, branding, and
                 everything in between.
@@ -349,7 +349,8 @@ const Marketing = () => {
             {/* Left - Features */}
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10">
-                Why <span className="text-secondary">NextLynx</span> Marketing
+                Why{" "}
+                <span className="text-secondary">NextLynx.AI Marketing</span>
               </h2>
 
               <div className="space-y-8">
@@ -407,8 +408,8 @@ const Marketing = () => {
             <span className="text-secondary italic">OUTPACE</span> THE MARKET?
           </h2>
           <p className="max-w-xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed mb-10">
-            Let NextLynx Marketing handle your growth. Reach out and we&rsquo;ll
-            show you exactly how we can scale your business.
+            Let NextLynx.AI Marketing handle your growth. Reach out and
+            we&rsquo;ll show you exactly how we can scale your business.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link

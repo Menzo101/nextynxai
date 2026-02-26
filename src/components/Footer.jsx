@@ -6,8 +6,8 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   const subsidiaryLinks = [
-    { name: "NextLynx Software", href: "/software" },
-    { name: "NextLynx Marketing", href: "/marketing" },
+    { name: "NextLynx.Ai Software", href: "/software" },
+    { name: "NextLynx.Ai Marketing", href: "/marketing" },
     { name: "Tobidevs Academy", href: "/academy" },
     { name: "Talent Network", href: "/talent" },
   ];
@@ -29,9 +29,9 @@ const Footer = () => {
               <img src={logo} alt="NextLynx.AI" className="h-44 md:h-52" />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed">
-              A premier software development firm driving digital
-              transformation through AI-powered software, marketing, education,
-              and talent solutions.
+              A premier software development firm driving digital transformation
+              through AI-powered software, marketing, education, and talent
+              solutions.
             </p>
             <div className="flex items-center gap-3 pt-1">
               {/* Instagram */}
@@ -168,7 +168,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs tracking-[0.1em] uppercase">
-            &copy; 2024 NextLynx AI Ecosystem. All Rights Reserved.
+            &copy; 2026 NextLynx AI Ecosystem. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

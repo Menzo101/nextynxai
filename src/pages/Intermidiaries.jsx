@@ -4,12 +4,12 @@ const divisions = [
   {
     title: "Enterprise Product",
     description:
-      "NextLynx Software builds high-performance digital products. From SaaS platforms to complex enterprise systems, we deliver scalable solutions powered by AI.",
+      "NextLynx.AI Software builds high-performance digital products. From SaaS platforms to complex enterprise systems, we deliver scalable solutions powered by AI.",
   },
   {
     title: "Marketing Agency",
     description:
-      "NextLynx Marketing drives growth through data-first digital strategies. We optimize campaigns, analyze markets, and maximize ROI with AI-powered insights.",
+      "NextLynx.AI Marketing drives growth through data-first digital strategies. We optimize campaigns, analyze markets, and maximize ROI with AI-powered insights.",
   },
   {
     title: "Developer Academy",
@@ -29,8 +29,18 @@ const capabilities = [
     description:
       "Proprietary AI models power every subsidiary, creating a unified intelligence layer across development, marketing, education, and recruitment.",
     icon: (
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+      <svg
+        className="w-5 h-5 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+        />
       </svg>
     ),
   },
@@ -39,8 +49,18 @@ const capabilities = [
     description:
       "Each subsidiary feeds data and insights into the others, creating a compounding advantage that standalone companies simply cannot match.",
     icon: (
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      <svg
+        className="w-5 h-5 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+        />
       </svg>
     ),
   },
@@ -49,8 +69,18 @@ const capabilities = [
     description:
       "A single data backbone connects all subsidiaries, enabling real-time analytics, shared learnings, and coordinated decision-making at scale.",
     icon: (
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+      <svg
+        className="w-5 h-5 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+        />
       </svg>
     ),
   },
@@ -59,8 +89,18 @@ const capabilities = [
     description:
       "Our interconnected model means scaling one division strengthens them all. Growth is compounding, not linear.",
     icon: (
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+      <svg
+        className="w-5 h-5 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+        />
       </svg>
     ),
   },
