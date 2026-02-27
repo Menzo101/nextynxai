@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import codeWithAiImg from "../assets/codewithai.jpg";
+import digitalMarketingImg from "../assets/digitalmarketing.jpg";
+import systemInfraImg from "../assets/systeminfrastructure.jpg";
+import techHireImg from "../assets/techhire.jpg";
+import businessEcoImg from "../assets/businessecosystem.jpg";
 
 const blogPosts = [
   {
@@ -11,7 +16,12 @@ const blogPosts = [
     author: "NextLynx.AI Team",
     date: "Feb 20, 2026",
     readTime: "7 min read",
-    tags: ["AI Software Development", "Machine Learning", "Enterprise Solutions"],
+    image: codeWithAiImg,
+    tags: [
+      "AI Software Development",
+      "Machine Learning",
+      "Enterprise Solutions",
+    ],
     featured: true,
   },
   {
@@ -23,6 +33,7 @@ const blogPosts = [
     author: "NextLynx.AI Marketing",
     date: "Feb 15, 2026",
     readTime: "6 min read",
+    image: digitalMarketingImg,
     tags: ["Digital Marketing", "SEO Strategy", "Growth Marketing"],
     featured: false,
   },
@@ -35,6 +46,7 @@ const blogPosts = [
     author: "TobiDevs Academy",
     date: "Feb 10, 2026",
     readTime: "5 min read",
+    image: systemInfraImg,
     tags: ["Coding Bootcamp", "Developer Training", "Tech Education"],
     featured: false,
   },
@@ -47,6 +59,7 @@ const blogPosts = [
     author: "NextLynx.AI Talent",
     date: "Feb 5, 2026",
     readTime: "6 min read",
+    image: techHireImg,
     tags: ["Tech Recruitment", "Talent Acquisition", "Hiring Developers"],
     featured: false,
   },
@@ -59,18 +72,21 @@ const blogPosts = [
     author: "NextLynx.AI Software",
     date: "Jan 28, 2026",
     readTime: "8 min read",
+    image: codeWithAiImg,
     tags: ["SaaS Development", "Software Architecture", "Cloud Computing"],
     featured: false,
   },
   {
     id: 6,
     category: "Industry Insights",
-    title: "The Interconnected Business Model: How Subsidiaries Create Compounding Growth",
+    title:
+      "The Interconnected Business Model: How Subsidiaries Create Compounding Growth",
     excerpt:
       "NextLynx.AI's ecosystem of four specialized subsidiaries—software, marketing, education, and talent—creates a compounding advantage. Learn how cross-division synergy drives exponential business growth.",
     author: "NextLynx.AI Team",
     date: "Jan 20, 2026",
     readTime: "7 min read",
+    image: businessEcoImg,
     tags: ["Business Strategy", "Digital Transformation", "Tech Ecosystem"],
     featured: false,
   },
@@ -88,41 +104,43 @@ const categories = [
 const NextLynxAiBlogPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredPosts =
-    activeCategory === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === activeCategory);
+  const filteredPosts = useMemo(
+    () =>
+      activeCategory === "All"
+        ? blogPosts
+        : blogPosts.filter((post) => post.category === activeCategory),
+    [activeCategory],
+  );
 
-  const featuredPost = blogPosts.find((post) => post.featured);
+  const featuredPost = blogPosts[0];
 
   return (
     <div className="bg-primary">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center">
-          <div className="inline-block mb-6">
-            <span className="text-secondary text-xs font-medium tracking-wider uppercase border border-secondary/40 rounded-full px-4 py-1.5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-12 sm:pb-16 text-center">
+          <div className="inline-block mb-4 sm:mb-6">
+            <span className="text-secondary text-[10px] sm:text-xs font-medium tracking-wider uppercase border border-secondary/40 rounded-full px-3 sm:px-4 py-1 sm:py-1.5">
               NextLynx.AI Blog — Insights & Resources
             </span>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
             AI-Powered Insights for{" "}
             <span className="text-secondary">Digital Growth</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed mb-10">
+          <p className="max-w-2xl mx-auto text-gray-400 text-xs sm:text-base leading-relaxed mb-8 sm:mb-10 px-2 sm:px-0">
             Expert articles on AI software development, digital marketing
-            strategies, developer education, and tech talent acquisition.
-            Stay ahead with actionable insights from the NextLynx.AI ecosystem.
+            strategies, developer education, and tech talent acquisition. Stay
+            ahead with actionable insights from the NextLynx.AI ecosystem.
           </p>
 
           {/* Search Bar */}
-          <div className="max-w-xl mx-auto relative">
+          <div className="max-w-xl mx-auto relative px-2 sm:px-0">
             <input
               type="text"
-              placeholder="Search articles on AI, software development, marketing..."
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 pl-12 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-secondary/50 transition-colors"
+              placeholder="Search articles..."
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 sm:px-5 py-3 sm:py-3.5 pl-10 sm:pl-12 text-white text-xs sm:text-sm placeholder-gray-500 focus:outline-none focus:border-secondary/50 transition-colors"
             />
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
@@ -143,19 +161,27 @@ const NextLynxAiBlogPage = () => {
 
       {/* Featured Article */}
       {featuredPost && (
-        <section className="pb-16">
+        <section className="pb-10 sm:pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-secondary/40 transition-colors group">
+            <div className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:border-secondary/40 transition-colors group">
               <div className="grid md:grid-cols-2">
-                {/* Featured Image Placeholder */}
-                <div className="h-64 md:h-auto bg-gradient-to-br from-secondary/20 to-primary relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/15 via-transparent to-transparent"></div>
-                  <div className="absolute top-6 left-6">
+                {/* Featured Image */}
+                <div className="h-48 sm:h-64 md:h-auto bg-gradient-to-br from-secondary/20 to-primary relative overflow-hidden">
+                  {featuredPost.image && (
+                    <img
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      className="w-full h-full object-cover absolute inset-0"
+                      decoding="async"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute top-6 left-6 z-10">
                     <span className="bg-secondary text-white text-xs font-semibold px-3 py-1 rounded-full">
                       Featured
                     </span>
                   </div>
-                  <div className="absolute bottom-6 left-6 right-6">
+                  <div className="absolute bottom-6 left-6 right-6 z-10">
                     <div className="flex flex-wrap gap-2">
                       {featuredPost.tags.map((tag) => (
                         <span
@@ -170,17 +196,17 @@ const NextLynxAiBlogPage = () => {
                 </div>
 
                 {/* Featured Content */}
-                <div className="p-8 md:p-10 flex flex-col justify-center">
-                  <span className="text-secondary text-xs font-medium tracking-wider uppercase mb-3">
+                <div className="p-5 sm:p-8 md:p-10 flex flex-col justify-center">
+                  <span className="text-secondary text-[10px] sm:text-xs font-medium tracking-wider uppercase mb-2 sm:mb-3">
                     {featuredPost.category}
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4 group-hover:text-secondary transition-colors">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight mb-3 sm:mb-4 group-hover:text-secondary transition-colors">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
+                  <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
                     {featuredPost.excerpt}
                   </p>
-                  <div className="flex items-center gap-4 text-gray-500 text-xs mb-6">
+                  <div className="flex items-center flex-wrap gap-2 sm:gap-4 text-gray-500 text-[10px] sm:text-xs mb-4 sm:mb-6">
                     <span>{featuredPost.author}</span>
                     <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
                     <span>{featuredPost.date}</span>
@@ -214,14 +240,14 @@ const NextLynxAiBlogPage = () => {
       )}
 
       {/* Category Filter */}
-      <section className="pb-8">
+      <section className="pb-6 sm:pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap scrollbar-hide">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`text-sm font-medium px-4 py-2 rounded-lg transition-colors ${
+                className={`text-xs sm:text-sm font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-colors whitespace-nowrap flex-shrink-0 ${
                   activeCategory === cat
                     ? "bg-secondary text-white"
                     : "bg-white/5 text-gray-400 hover:text-white border border-white/10 hover:border-white/20"
@@ -235,30 +261,39 @@ const NextLynxAiBlogPage = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-12">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
                 className="bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-secondary/40 transition-colors group"
               >
-                {/* Post Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-secondary/10 to-primary relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white/10 backdrop-blur-sm text-white/80 text-xs font-medium px-3 py-1 rounded-full">
+                {/* Post Image */}
+                <div className="h-40 sm:h-48 bg-gradient-to-br from-secondary/10 to-primary relative overflow-hidden">
+                  {post.image && (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/15"></div>
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-black/40 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">
                       {post.category}
                     </span>
                   </div>
                 </div>
 
                 {/* Post Content */}
-                <div className="p-6">
-                  <h3 className="text-white font-semibold text-lg leading-snug mb-3 group-hover:text-secondary transition-colors">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-white font-semibold text-base sm:text-lg leading-snug mb-2 sm:mb-3 group-hover:text-secondary transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
 
@@ -309,11 +344,11 @@ const NextLynxAiBlogPage = () => {
       </section>
 
       {/* SEO Content Section */}
-      <section className="py-16 bg-primary/80">
+      <section className="py-12 sm:py-16 bg-primary/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4 sm:mb-6">
                 Why Read the NextLynx.AI Blog?
               </h2>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
@@ -332,7 +367,7 @@ const NextLynxAiBlogPage = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {[
                 {
                   title: "AI Software Development Insights",
@@ -373,24 +408,24 @@ const NextLynxAiBlogPage = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20">
+      <section className="py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 border border-white/10 rounded-2xl py-16 px-6 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <div className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl py-10 sm:py-16 px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Never Miss an <span className="text-secondary">Insight</span>
             </h2>
-            <p className="max-w-xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
+            <p className="max-w-xl mx-auto text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
               Subscribe to the NextLynx.AI newsletter for weekly articles on AI
               software development, digital marketing strategies, developer
               education, and tech industry trends.
             </p>
-            <div className="flex items-center justify-center gap-3 max-w-md mx-auto flex-wrap sm:flex-nowrap">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 max-w-md mx-auto flex-col sm:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 min-w-0 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-secondary/50 transition-colors"
+                className="w-full sm:flex-1 sm:min-w-0 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 sm:py-3 text-white text-xs sm:text-sm placeholder-gray-500 focus:outline-none focus:border-secondary/50 transition-colors"
               />
-              <button className="bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors text-sm whitespace-nowrap">
+              <button className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-2.5 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm whitespace-nowrap">
                 Subscribe
               </button>
             </div>

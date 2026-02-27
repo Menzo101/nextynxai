@@ -1,4 +1,5 @@
 import "./App.css";
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,7 +12,8 @@ import ContactUsPage from "./pages/ContactUsPage";
 import AboutUs from "./pages/AboutUs";
 import SoftwarePage from "./pages/SoftwarePage";
 import Error from "./pages/Error";
-import NextLynxAiBlogPage from "./pages/NextLynxAiBlogPage";
+
+const NextLynxAiBlogPage = lazy(() => import("./pages/NextLynxAiBlogPage"));
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
             <Route path="/contact" element={<ContactUsPage />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/software" element={<SoftwarePage />} />
-            <Route path="/blog" element={<NextLynxAiBlogPage />} />
+            <Route path="/blog" element={<Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-2 border-secondary border-t-transparent rounded-full animate-spin"></div></div>}><NextLynxAiBlogPage /></Suspense>} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
