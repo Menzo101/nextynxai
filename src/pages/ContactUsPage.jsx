@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const interestAreas = ["Software", "Marketing", "Academy", "Talent"];
 
@@ -21,6 +22,8 @@ const industryOptions = [
 
 const ContactUsPage = () => {
   const [activeTab, setActiveTab] = useState("Software");
+  // Replace "YOUR_FORM_ID" with your actual Formspree form ID (e.g. "xyzabcde")
+  const [state, handleSubmit] = useForm("mvzblyrn");
   const [formData, setFormData] = useState({
     fullName: "",
     workEmail: "",
@@ -35,9 +38,36 @@ const ContactUsPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  if (state.succeeded) {
+    return (
+      <div className="bg-primary min-h-screen flex items-center justify-center">
+        <div className="text-center px-4">
+          <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg
+              className="w-8 h-8 text-secondary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Inquiry Submitted!
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto">
+            Thank you for reaching out. Our team will review your submission and
+            get back to you within one business day.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-primary">
@@ -151,6 +181,9 @@ const ContactUsPage = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Hidden field for interest area */}
+                <input type="hidden" name="interestArea" value={activeTab} />
+
                 {/* Full Name & Work Email */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -307,25 +340,36 @@ const ContactUsPage = () => {
                   />
                 </div>
 
+                {/* Validation Errors */}
+                <ValidationError
+                  prefix="Email"
+                  field="workEmail"
+                  errors={state.errors}
+                  className="text-red-400 text-xs"
+                />
+
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-white font-medium py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
+                  disabled={state.submitting}
+                  className="w-full bg-secondary hover:bg-secondary/90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
                 >
-                  Submit Inquiry
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
+                  {state.submitting ? "Submitting..." : "Submit Inquiry"}
+                  {!state.submitting && (
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  )}
                 </button>
 
                 <p className="text-white text-xs uppercase tracking-wider text-center">
