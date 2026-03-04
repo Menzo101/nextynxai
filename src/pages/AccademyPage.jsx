@@ -10,8 +10,18 @@ const courses = [
       "Build smarter products faster. Learn to integrate AI tools, APIs, and automation into your development workflow for 10x productivity.",
     image: codingWithAiImage,
     icon: (
-      <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg
+        className="w-4 h-4 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+        />
       </svg>
     ),
   },
@@ -21,8 +31,18 @@ const courses = [
       "Master server-side programming, databases, APIs, and cloud infrastructure. Build scalable backends that power modern applications.",
     image: backendImage,
     icon: (
-      <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+      <svg
+        className="w-4 h-4 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+        />
       </svg>
     ),
   },
@@ -32,8 +52,18 @@ const courses = [
       "Build beautiful, responsive user interfaces with modern frameworks. Master React, CSS, component architecture, and interactive web experiences.",
     image: frontendImage,
     icon: (
-      <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      <svg
+        className="w-4 h-4 text-secondary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+        />
       </svg>
     ),
   },
@@ -69,20 +99,20 @@ const roadmapSteps = [
 const testimonials = [
   {
     quote:
-      "Tobidevs Academy completely changed my career trajectory. The curriculum is hands-on, the mentors are brilliant, and I landed a role at a top startup within 3 months of graduating.",
-    name: "Sarah Jenkins",
+      "Tobidevs Academy completely changed my career trajectory. The curriculum is hands-on, the mentors are brilliant.",
+    name: "Samuel Opeyemi",
     role: "AI Engineer",
   },
   {
     quote:
       "The community and career support set expectations that just deliver. It's not just coding—it's how to think, build, and ship like a professional.",
-    name: "David Chen",
+    name: "David John",
     role: "Fullstack Developer",
   },
   {
     quote:
-      "I came for the code, stayed for the community. The bootcamp taught me to build real products and the mentorship helped me land my dream role at a Fortune 500 company.",
-    name: "Monica Torres",
+      "I came for the code, stayed for the community. The bootcamp taught me to build real products and the mentorship helped me land a job as a freelancer",
+    name: "Daniel James",
     role: "Software Engineer",
   },
 ];
@@ -103,13 +133,14 @@ const AccademyPage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             TobiDevs Academy:
             <br />
-            Build Products. <span className="text-secondary">Ship with AI.</span>
+            Build Products.{" "}
+            <span className="text-secondary">Ship with AI.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base leading-relaxed mb-10">
-            At TobiDevs, we teach you to build and ship production-ready
-            digital products. Leverage modern AI tools for maximum development
-            speed, guided by industry veterans.
+            At TobiDevs, we teach you to build and ship production-ready digital
+            products. Leverage modern AI tools for maximum development speed,
+            guided by industry veterans.
           </p>
 
           <div className="flex items-center justify-center gap-4">
@@ -146,13 +177,33 @@ const AccademyPage = () => {
             {/* Navigation Arrows */}
             <div className="hidden sm:flex items-center gap-3">
               <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-secondary hover:text-secondary transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
               <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-secondary hover:text-secondary transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
@@ -300,10 +351,10 @@ const AccademyPage = () => {
                 TobiDevs Mentorship
               </h2>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
-                Every TobiDevs student is paired with an AI-augmented
-                mentorship system backed by experienced engineers. Get
-                personalized feedback, code reviews on real production
-                repositories, and career guidance tailored to your goals.
+                Every TobiDevs student is paired with an AI-augmented mentorship
+                system backed by experienced engineers. Get personalized
+                feedback, code reviews on real production repositories, and
+                career guidance tailored to your goals.
               </p>
               <ul className="space-y-3">
                 {[
@@ -312,8 +363,15 @@ const AccademyPage = () => {
                   "Code reviews on real production codebases",
                   "Career strategy and portfolio building",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-gray-300 text-sm">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-gray-300 text-sm"
+                  >
+                    <svg
+                      className="w-5 h-5 text-secondary flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                     </svg>
                     {item}
@@ -326,8 +384,18 @@ const AccademyPage = () => {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
               <div className="text-center">
                 <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-10 h-10 text-secondary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                 </div>
                 <p className="text-gray-400 text-sm sm:text-base">
