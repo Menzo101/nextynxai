@@ -3,14 +3,6 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const interestAreas = ["Software", "Marketing", "Academy", "Talent"];
 
-const budgetOptions = [
-  "Under $5K",
-  "$5K - $10K",
-  "$10K - $25K",
-  "$25K - $50K",
-  "$50K+",
-];
-
 const industryOptions = [
   "Technology",
   "Finance",
@@ -196,7 +188,7 @@ const ContactUsPage = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-white/40 focus:outline-none focus:border-secondary/50 transition-colors"
-                      placeholder="John Doe"
+                      placeholder=" your name"
                     />
                   </div>
                   <div>
@@ -209,7 +201,7 @@ const ContactUsPage = () => {
                       value={formData.workEmail}
                       onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-white/40 focus:outline-none focus:border-secondary/50 transition-colors"
-                      placeholder="john@company.com"
+                      placeholder="your Email"
                     />
                   </div>
                 </div>
@@ -275,30 +267,6 @@ const ContactUsPage = () => {
 
                 {/* Budget & Industry */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-white/70 text-xs mb-1.5 block">
-                      Project Intensity / Budget
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-secondary/50 transition-colors appearance-none"
-                    >
-                      <option value="" className="text-black bg-white">
-                        Select budget
-                      </option>
-                      {budgetOptions.map((opt) => (
-                        <option
-                          key={opt}
-                          value={opt}
-                          className="text-black bg-white"
-                        >
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
                   <div>
                     <label className="text-white/70 text-xs mb-1.5 block">
                       Industry
