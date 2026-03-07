@@ -1,5 +1,26 @@
 import { Link } from "react-router-dom";
 
+const stats = [
+  { value: "500+", label: "Vetted Engineers" },
+  { value: "97%", label: "Match Rate" },
+  { value: "48h", label: "Avg. Time to Hire" },
+  { value: "30+", label: "Countries" },
+];
+
+const businessPerks = [
+  "AI-Verified Talent Profiles",
+  "48-Hour Matching Guarantee",
+  "Dedicated Account Manager",
+  "Flexible Engagement Models",
+];
+
+const talentPerks = [
+  "High-Impact AI & Software Projects",
+  "Competitive Top-Tier Rates",
+  "Skill Verification & Badges",
+  "Global Remote Opportunities",
+];
+
 const Talent = () => {
   return (
     <div className="bg-primary">
