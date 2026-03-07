@@ -139,12 +139,7 @@ const ContactUsPage = () => {
                   <div className="w-9 h-9 rounded-full bg-secondary/20 flex items-center justify-center">
                     <span className="text-secondary font-bold text-xs">M</span>
                   </div>
-                  <div>
-                    <p className="text-white text-sm font-medium">
-                      Akano Oluwatobi
-                    </p>
-                    <p className="text-white/50 text-xs">Founder</p>
-                  </div>
+                  <div></div>
                 </div>
               </div>
             </div>
