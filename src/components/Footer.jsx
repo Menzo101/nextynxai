@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 pt-1">
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/nextlynx.ai?igsh=aWExcmkybjBuejlj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"

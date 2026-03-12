@@ -8,8 +8,8 @@ export default {
         body: ["Montserrat", "sans-serif"],
       },
       colors: {
-        primary: "#0E21A0",
-        secondary: "#FA8112",
+        primary: "#000000",
+        secondary: "#00BCD4",
       },
     },
   },

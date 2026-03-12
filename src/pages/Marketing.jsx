@@ -124,9 +124,7 @@ const Marketing = () => {
             {/* Right - ROI Card */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-6">
               <div className="flex items-center justify-between mb-4">
-                <p className="text-white font-semibold text-sm">
-                  $2.6M Revenue Generated for Clients
-                </p>
+                <p className="text-white font-semibold text-sm"></p>
                 <span className="text-secondary text-xs font-medium">Live</span>
               </div>
 
@@ -139,7 +137,7 @@ const Marketing = () => {
                     style={{
                       height: `${h}%`,
                       backgroundColor:
-                        i >= 7 ? "#FA8112" : "rgba(250, 129, 18, 0.3)",
+                        i >= 7 ? "#00BCD4" : "rgba(0, 188, 212, 0.3)",
                     }}
                   ></div>
                 ))}
@@ -264,12 +262,12 @@ const Marketing = () => {
                       >
                         <stop
                           offset="0%"
-                          stopColor="#FA8112"
+                          stopColor="#00BCD4"
                           stopOpacity="0.3"
                         />
                         <stop
                           offset="100%"
-                          stopColor="#FA8112"
+                          stopColor="#00BCD4"
                           stopOpacity="0"
                         />
                       </linearGradient>
@@ -277,7 +275,7 @@ const Marketing = () => {
                     <path
                       d="M0,140 C50,130 100,120 150,100 C200,80 250,40 300,25 C350,10 380,5 400,2"
                       fill="none"
-                      stroke="#FA8112"
+                      stroke="#00BCD4"
                       strokeWidth="2"
                     />
                     <path
